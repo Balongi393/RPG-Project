@@ -181,18 +181,7 @@ class Player:
 
         p = self.hp / self.maxhp * 100
 
-        if self.mp < spell.cost or spell.type == "white" and p > 50:
-            self.enemy_magic()
+        if self.mp < spell.cost or (spell.type == "white" and p > 50):
+            return self.enemy_magic()
         else:
-            return spell, magic_dmg
-
-
-
-
-
-
-
-
-
-
-
+            return magic_dmg

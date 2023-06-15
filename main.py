@@ -145,7 +145,7 @@ while running:
                     print(enemies[enemy].name + " has died")
                     del enemies[enemy]
 
-        # Check If Battle is Over
+    # Check If Battle is Over
     defeated_enemies = 0
     defeated_players = 0
 
@@ -196,32 +196,28 @@ while running:
                 if players[target].get_hp() == 0:
                     print("\n\t" + players[target].name + " has died")
                     del players[target]
-            # print("Enemy chose", spell, "damage", magic_dmg)
+            print("Enemy chose", spell, "damage", magic_dmg)
 
     # # Check If Battle is Over
-    # defeated_enemies = 0
-    # defeated_players = 0
-    #
-    # for enemy in enemies:
-    #     if enemy.get_hp() == 0:
-    #         defeated_enemies += 1
-    #
-    # for player in players:
-    #     if player.get_hp() == 0:
-    #         defeated_players += 1
-    #
+    defeated_enemies = 0
+    defeated_players = 0
+    
+    for enemy in enemies:
+         if enemy.get_hp() == 0:
+             defeated_enemies += 1
+    
+    for player in players:
+         if player.get_hp() == 0:
+             defeated_players += 1
+    
     # # Check If Player won
-    # if defeated_enemies == 3:
-    #     print("============================================")
-    #     print("\t" + colors.OKGREEN + colors.BOLD + "You Win" + colors.ENDC)
-    #     running = False
-    #
+    if defeated_enemies == 3:
+         print("============================================")
+         print("\t" + colors.OKGREEN + colors.BOLD + "You Win" + colors.ENDC)
+         running = False
+    
     # # Check If Enemy Won
-    # elif defeated_players == 3:
-    #     print("============================================")
-    #     print("\t" + colors.FAIL + colors.BOLD + "Enemy Defeated You" + colors.ENDC)
-    #     running = False
-    #
-    #
-    #
-
+    elif defeated_players == 3:
+         print("============================================")
+         print("\t" + colors.FAIL + colors.BOLD + "Enemy Defeated You" + colors.ENDC)
+         running = False   
