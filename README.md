@@ -1,2 +1,2 @@
 # RPG-Project
-Its an RPG game that i made using python
+This is a text-based RPG game developed in Python.
